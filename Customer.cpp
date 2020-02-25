@@ -67,5 +67,7 @@ public:
     std::string Customer::getCustomer()
 	{
 	    std::string lineOfCredit= (std::string string) lineOfCredit;
-	    return customerNum+customerName+lineOfCredit;
+	    return customerNum;
+	    return customerName;
+	    return lineOfCredit;
 	}
