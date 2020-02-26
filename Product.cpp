@@ -1,4 +1,5 @@
 #include "Product.h"
+#include "inventory.dat"
 #include <iomanip>
 using namespace std;
 
@@ -31,4 +32,21 @@ void Product::print()
    int total = price * stockQuantity;
      cout << setfill (" ");
     cout<< setw(4) << itemNo << "        " <<setw(13) << description << "        " <<  setw(3) << stockQuantity << "     " << setw(7) << total;
+}
+void Product::getProduct(){
+ifstream inFile;
+        inFile.open("inventory.dat");
+        if(inFile.is_open())
+        {
+            while (!inFile.eof())
+            {
+                getline(inFile, itemNo, ',');
+                getline(inFile, description, ',');
+                getline(inFile, price, ',');
+                getline(inFile, stockQuantity, ',');
+
+                Product prod(itemNo, description,price,stockQuantity)     
+            }
+        }
+            inF.close();
 }
