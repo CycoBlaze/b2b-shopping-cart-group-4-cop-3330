@@ -60,20 +60,6 @@ int main(){
       cout<< "Customer does not exist";
   }
   
-  // search for items 
-  int stockQuantity, itemNo;
-  int choice;
-  
-  do {
-    cout<< "Please enter item number: ";
-    cin >> itemNo;
-    cout << "Quantity of item? ";
-    cin >> stockQuantity;
-    cout << " More items?(Yes-1 or no-2) ";
-    cin >> choice;
-  }while(choice==1);
-  
- 
   
   
   // make sure the adress ouputs
@@ -92,11 +78,42 @@ int main(){
   // product search
    Product product1[20];
   product1.getProduct(); // data from the inventory
-  string lines[20];
+  string lines[20], description;
+ int stockQuantity, itemNo;
+  double price;
+ int choice;
   
-  for (int i=0; i<20; i++)
+  do {
+    cout<< "Please enter item number: ";
+    cin >> itemNo;
+    cout << "Quantity of item? ";
+    cin >> stockQuantity;
+    cout << " More items?(Yes-1 or no-2) ";
+    cin >> choice;
+  }while(choice==1);
   
-	return 0;
+  
+  for (int i=0; i<20; i++){
+    getline(inventoryFile, lines[i]);
+    itemNo=stoi(StringHelper::parse(lines[i], ',')[0]);
+    description= StringHelper::parse(lines[i],',')[1];
+    price= stod(StringHelper::parse(lines[i],',')[2]);
+    stockQuantity= stoi(StringHelper::parse(lines[i],'.')[3]);
+    
+    produt1[i].setItemNo(itemNo);
+    produt1[i].setDescription(description);
+    produt1[i].setprice(price);
+    produt1[i].setStockQuantity(stockQuantity);
+    
+    // print fucntions
+    produt1[i].getItemNo();
+    produt1[i].getDescription();
+    produt1[i].getprice();
+    produt1[i].getStockQuantity();
+  }
+  
+  
+  return 0;
 }
 
 string generateOrderNum(){
