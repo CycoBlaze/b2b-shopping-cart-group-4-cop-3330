@@ -36,6 +36,7 @@ void Address::setStreetAddress(string A_streetaddress){streetaddress = A_streeta
 void Address::setCity(string A_city){ city= A_city};
 void Address::setState(string A_state){ state = A_state}; 
 void Address::settZipCode(string A_zip){ zipcode = A_zip};
+void Address::print(){ cout << streetaddress << " " << city << ", " << state << " " << zipCode;}
 
 string Address::getStreetAddress(){return streetaddress};
 string Address::getCity(){return city};
