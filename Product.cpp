@@ -37,7 +37,7 @@ Product::Product(int i, string d, double p, int s)
 //set price of items
             void Product::setPrice(int s){stockQuantity = s;}
 //prints the items
-void Product::print()
+void Product::prodprint()
 {
    int total = price * stockQuantity;
     cout << "--------------------------------------------" << endl;
