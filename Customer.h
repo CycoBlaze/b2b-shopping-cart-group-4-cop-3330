@@ -37,4 +37,6 @@ class Customer
         std::string getCustomerNum();
         std::string getCustomerName();
         double getLineOfCredit();
+	
+	void customerprint();
 };
