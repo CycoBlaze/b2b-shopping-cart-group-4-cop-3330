@@ -24,7 +24,7 @@ void setStreetAddress(std::string);
 void setCity(std::string);
 void setState(std::string); 
 void settZipCode(std::string);
-
+void print()
 string getStreetAddress();
 string getCity();
 string getState(); 
