@@ -1,3 +1,7 @@
+//B2BDriver.cpp
+// Group 4 Noah Richardson, Milik Bennett-Spence, Desjah Thompson, Terik Hamilton
+// 02/26/20
+// create orders for existing customers and allow items to be added as long as they have not surpassed th maxiumum of their reamaining line of credit 
 #include <ctime>
 #include<sstream>
 #include “Address.h”
