@@ -16,8 +16,8 @@ class Customer
 
     
     public:
-        Customer()
-        Customer(std::sting, std::string, double)
+        Customer();
+        Customer(std::sting, std::string, double);
         
         //Receive from file Function
 	    void grabcustomer();
@@ -26,8 +26,8 @@ class Customer
 	    std::string getCustomer();
          
         //Class vectors
-	    std::vector<Customer> cust;
-	    std::vector<Address> addy;
+	    std::vector<Customer> arrCustomer;
+	    std::vector<Address> arrAddress;
          
         std::string setCustomerNum(std::string);
         std::string setCustomerName(std::string);
