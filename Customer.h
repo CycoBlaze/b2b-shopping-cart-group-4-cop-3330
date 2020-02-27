@@ -7,7 +7,7 @@
 
 
 
-class Address
+class Customer
 {
     std::string customerNum;
     std::string customerName;
